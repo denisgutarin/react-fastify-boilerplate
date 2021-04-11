@@ -1,0 +1,21 @@
+{
+  "name": "boilerplate-test",
+  "version": "1.0.0",
+  "description": "yet another CRM",
+  "main": "index.js",
+  "author": "Denis Gutarin <denis.gutarin@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "server",
+    "gui"
+  ],
+  "scripts": {
+    "gui": "yarn workspace @osome-test/gui dev",
+    "server": "yarn workspace @osome-test/server dev",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn gui\""
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  }
+}
