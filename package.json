@@ -13,7 +13,8 @@
   "scripts": {
     "gui": "yarn workspace @boilerplate-test/gui dev",
     "server": "yarn workspace @boilerplate-test/server dev",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn gui\""
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn gui\"",
+    "test": "yarn workspace @boilerplate-test/server test && yarn workspace @boilerplate-test/gui test"
   },
   "devDependencies": {
     "concurrently": "^5.3.0"
