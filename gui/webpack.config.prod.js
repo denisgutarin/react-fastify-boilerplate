@@ -38,5 +38,7 @@ module.exports = merge(common, {
   optimization: {
     minimize: true,
     minimizer: [new OptimizeCssAssetsPlugin(), new TerserPlugin()],
+    splitChunks: { chunks: 'all' },
+    runtimeChunk: true,
   },
 });
