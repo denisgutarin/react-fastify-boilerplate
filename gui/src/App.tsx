@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { IndexPage } from './pages/index';
 
-const App = (a: any) => {
+const App = (): ReactElement => {
   return (
     <Router>
       <Switch>
