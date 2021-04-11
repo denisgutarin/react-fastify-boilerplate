@@ -6,10 +6,16 @@
   "author": "Denis Gutarin <denis.gutarin@gmail.com>",
   "license": "MIT",
   "private": true,
-  "workspaces": [
-    "server",
-    "gui"
-  ],
+  "workspaces": {
+    "packages": [
+      "server",
+      "gui"
+    ],
+    "nohoist": [
+      "@tailwindcss/forms",
+      "@tailwindcss/forms/**"
+    ]
+  },
   "scripts": {
     "gui": "yarn workspace @boilerplate-test/gui dev",
     "server": "yarn workspace @boilerplate-test/server dev",
